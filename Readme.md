@@ -5,6 +5,8 @@ The following links were provided in the Azure Purview Partner Accellerator Work
 
 This site will be archived December 1, 2021.
 
+Note that Will's Purview API deck is located here, [https://aka.ms/PurviewRESTAPIDeck](https://aka.ms/PurviewRESTAPIDeck)
+
 *   [Get started quickly & easily with Azure Purview!](https://azure.microsoft.com/en-us/services/purview/)
 *   [Microsoft Learn: Introduction to Azure Purview](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-purview/)
 *   [Azure Purview documentation](https://docs.microsoft.com/en-us/azure/purview/)
