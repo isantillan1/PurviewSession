@@ -7,6 +7,16 @@ This site will be archived December 1, 2021.
 
 Note that Will's Purview API deck is located here, [https://aka.ms/PurviewRESTAPIDeck](https://aka.ms/PurviewRESTAPIDeck)
 
+Will also mentioned some extra information at the following links:
+
+* Wiki on Excel Configuration: Excel Template and Configuration · [wjohnson/pyapacheatlas Wiki](https://github.com/wjohnson/pyapacheatlas/wiki/Excel-Template-and-Configuration)
+* Lineage with Excel:[https://www.youtube.com/watch?v=x_Wvf3nIulE](https://www.youtube.com/watch?v=x_Wvf3nIulE)
+* [Azure Purview Bulk Asset Upload with Excel and PyApacheAtlas](https://www.youtube.com/watch?v=27jRUydL6qE)
+* [databricks_catalog_dataframe.py](https://github.com/wjohnson/pyapacheatlas/blob/master/samples/databricks_catalog_dataframe.py)
+* [For those that want more and a deeper conversation around Apache Atlas APIs, please see this YouTube video:](https://www.youtube.com/watch?v=4qzjnMf1GN4)
+
+
+
 *   [Get started quickly & easily with Azure Purview!](https://azure.microsoft.com/en-us/services/purview/)
 *   [Microsoft Learn: Introduction to Azure Purview](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-purview/)
 *   [Azure Purview documentation](https://docs.microsoft.com/en-us/azure/purview/)
