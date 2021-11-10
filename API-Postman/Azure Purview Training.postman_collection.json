@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "25b0f8f6-fa58-4466-8d48-d857fec8a061",
+		"name": "Azure Purview Training",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setGlobalVariable(\"access_token\", jsonData.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "{{ClientID}}",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "{{Secret}}",
+							"type": "text"
+						},
+						{
+							"key": "resource",
+							"value": "73c2949e-da2d-457a-9607-fcc665198967",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://login.microsoftonline.com/{{TenantID}}/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"login",
+						"microsoftonline",
+						"com"
+					],
+					"path": [
+						"{{TenantID}}",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Azure Purview assets",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"keyword\":\"*\"\r\n}"
+				},
+				"url": {
+					"raw": "https://{{CatalogName}}.catalog.purview.azure.com/api/search/query?api-version=2021-09-01",
+					"protocol": "https",
+					"host": [
+						"{{CatalogName}}",
+						"catalog",
+						"purview",
+						"azure",
+						"com"
+					],
+					"path": [
+						"api",
+						"search",
+						"query"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2021-09-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Datasource list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{CatalogName}}.scan.purview.azure.com/datasources?api-version=2018-12-01-preview",
+					"protocol": "https",
+					"host": [
+						"{{CatalogName}}",
+						"scan",
+						"purview",
+						"azure",
+						"com"
+					],
+					"path": [
+						"datasources"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2018-12-01-preview"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Collection",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{CatalogName}}.purview.azure.com/account/collections/{{CollectionName}}?api-version=2019-11-01-preview",
+					"protocol": "https",
+					"host": [
+						"{{CatalogName}}",
+						"purview",
+						"azure",
+						"com"
+					],
+					"path": [
+						"account",
+						"collections",
+						"{{CollectionName}}"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2019-11-01-preview"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "TenantID",
+			"value": "<YOUR TENANT ID>"
+		},
+		{
+			"key": "ClientID",
+			"value": "<YOUR CLIENT ID>"
+		},
+		{
+			"key": "Secret",
+			"value": "<YOUR SECRET>"
+		},
+		{
+			"key": "CatalogName",
+			"value": "<YOUR AZURE PURVIEW CATALOG NAME>"
+		},
+		{
+			"key": "CollectionName",
+			"value": "<YOUR COLLECTION NAME>"
+		},
+		{
+			"key": "Token",
+			"value": "Bearer <YOUR TOKEN>"
+		}
+	]
+}
