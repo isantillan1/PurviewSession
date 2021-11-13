@@ -1,7 +1,7 @@
 # Resources - References in Slides
 ### Get started
 
-The following links were provided in the Azure Purview Partner Accellerator Workshop, Oct 9 and 10 2021.
+The following links were provided in the Azure Purview Partner Accelerator Workshop, Oct 9 and 10 2021.
 
 This site will be archived December 1, 2021.
 
