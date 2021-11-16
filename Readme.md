@@ -54,3 +54,9 @@ Will also mentioned some extra information at the following links:
 *   [Understand access and permissions - Azure Purview | Microsoft Docs](https://docs.microsoft.com/en-us/azure/purview/catalog-permissions)[](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/data-management/architectures/data-management-landing-zone)
 *   [Data Catalog lineage user guide - Azure Purview | Microsoft Docs](https://docs.microsoft.com/en-us/azure/purview/catalog-lineage-user-guide)
 *   [Azure SQL and Azure Purview work better together - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/azure-sql/azure-sql-and-azure-purview-work-better-together/ba-p/2812912) – Stored Procedure lineage in preview
+
+### Resources - Azure Purview Pricing
+
+*   [Pricing – Azure Purview – Pricing Calculator](https://azure.microsoft.com/en-ca/pricing/details/azure-purview/)
+*   [Pricing - Azure Purview](https://azure.microsoft.com/en-us/pricing/details/azure-purview/)
+*   [Pricing overview – How Azure pricing works](https://azure.microsoft.com/en-ca/pricing/?OCID=AID2200157_SEM_ab7e608258871f733c1e0107ca95dab1:G:s&ef_id=ab7e608258871f733c1e0107ca95dab1:G:s&msclkid=ab7e608258871f733c1e0107ca95dab1)
