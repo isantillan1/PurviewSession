@@ -60,3 +60,13 @@ Will also mentioned some extra information at the following links:
 *   [Pricing – Azure Purview – Pricing Calculator](https://azure.microsoft.com/en-ca/pricing/details/azure-purview/)
 *   [Pricing - Azure Purview](https://azure.microsoft.com/en-us/pricing/details/azure-purview/)
 *   [Pricing overview – How Azure pricing works](https://azure.microsoft.com/en-ca/pricing/?OCID=AID2200157_SEM_ab7e608258871f733c1e0107ca95dab1:G:s&ef_id=ab7e608258871f733c1e0107ca95dab1:G:s&msclkid=ab7e608258871f733c1e0107ca95dab1)
+
+### Links from Questions
+
+* [View, edit and delete assets in Purview catalog](https://docs.microsoft.com/en-us/azure/purview/catalog-asset-details) - This article discusses how to you can view your assets and their relevant details. It also describes how you can edit and delete assets from your catalog.
+*   [Delete behavior explained](https://docs.microsoft.com/en-us/azure/purview/catalog-asset-details#delete-behavior-explained) - 
+*   ** Any asset you delete using the delete button is permanently deleted in Azure Purview. However, if you run a full scan on the source from which the asset was ingested into the catalog, then the asset is reingested and you can discover it using the Purview catalog.
+
+** If you have a scheduled scan (weekly or monthly) on the source, the deleted asset will not get re-ingested into the catalog unless the asset is modified by an end user since the previous run of the scan. For example, if a SQL table was deleted from Purview, but after the table was deleted a user added a new column to the table in SQL, at the next scan the asset will be rescanned and ingested into the catalog.
+
+** If you delete an asset, only that asset is deleted. Purview does not currently support cascaded deletes. For example, if you delete a storage account asset in your catalog - the containers, folders and files within them are not deleted.
