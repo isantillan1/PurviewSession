@@ -63,8 +63,26 @@ Will also mentioned some extra information at the following links:
 
 ### Links from Questions
 
+####  How does delete work in Purview
 * [View, edit and delete assets in Purview catalog](https://docs.microsoft.com/en-us/azure/purview/catalog-asset-details) - This article discusses how to you can view your assets and their relevant details. It also describes how you can edit and delete assets from your catalog.
 *   [Delete behavior explained](https://docs.microsoft.com/en-us/azure/purview/catalog-asset-details#delete-behavior-explained) -  Quote below
 > Any asset you delete using the delete button is permanently deleted in Azure Purview. However, if you run a full scan on the source from which the asset was ingested into the catalog, then the asset is reingested and you can discover it using the Purview catalog. 
 > If you have a scheduled scan (weekly or monthly) on the source, the deleted asset will not get re-ingested into the catalog unless the asset is modified by an end user since the previous run of the scan. For example, if a SQL table was deleted from Purview, but after the table was deleted a user added a new column to the table in SQL, at the next scan the asset will be rescanned and ingested into the catalog.
 > If you delete an asset, only that asset is deleted. Purview does not currently support cascaded deletes. For example, if you delete a storage account asset in your catalog - the containers, folders and files within them are not deleted.
+
+#### Collections
+*   [Create and manage collections in Azure Purview](https://docs.microsoft.com/en-us/azure/purview/how-to-create-and-manage-collections) - Collections in Azure Purview can be used to organize assets and sources by your business's flow, but they are also the tool used to manage access across Purview. This guide will take you through the creation and management of these collections, as well as cover steps about how to register sources and add assets into your collections. 
+*   [Azure Purview collections architectures and best practices](https://docs.microsoft.com/en-us/azure/purview/concept-best-practices-collections) - Collections in Azure Purview support organizational mapping of metadata. By using collections, you can manage and maintain data sources, scans, and assets in a hierarchy instead of a flat structure. Collections allow you to build a custom hierarchical model of your data landscape based on how your organization plans to use Azure Purview to govern your landscape.
+
+
+####  Azure Purview Best Practice Documentation.
+These links are an ever growing list of best practices and recommendations from the field and product team.
+
+
+* [Pricing guidelines](https://docs.microsoft.com/en-us/azure/purview/concept-guidelines-pricing)
+* [Deployment best practices](https://docs.microsoft.com/en-us/azure/purview/deployment-best-practices)
+* [Lineage best practices](https://docs.microsoft.com/en-us/azure/purview/concept-best-practices-lineage-azure-data-factory)
+* [Accounts architecture](https://docs.microsoft.com/en-us/azure/purview/concept-best-practices-accounts)
+* [Collections architecture](https://docs.microsoft.com/en-us/azure/purview/concept-best-practices-collections)
+* [Network architecture](https://docs.microsoft.com/en-us/azure/purview/concept-best-practices-network)
+* [Scanning best practices](https://docs.microsoft.com/en-us/azure/purview/concept-best-practices-scanning)
