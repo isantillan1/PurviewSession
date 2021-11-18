@@ -25,7 +25,7 @@ Will also mentioned some extra information at the following links:
 ### Communities
 
 *   [Join our Azure Data Community](https://www.microsoft.com/en-us/sql-server/community?activetab=pivot_1%3aprimaryr3)
-*   [Join our Azure Purview Tech Community](https://techcommunity.microsoft.com/t5/azure-purview/bg-p/AzurePurviewBlog)
+*   [Join our Azure Purview Tech Community](https://techcommunity.microsoft.com/t5/azure-purview/bd-p/AzurePurview)
 *   [Azure Purview - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/azure-purview/bg-p/AzurePurviewBlog) - Blog
 
 ### Customer stories
